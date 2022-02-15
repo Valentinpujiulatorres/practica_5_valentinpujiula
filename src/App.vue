@@ -1,7 +1,7 @@
 <template>
-  <div id="nav" class="nav nav-fluid ">
-    <router-link to="/Tienda">Tienda</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="nav" class="nav nav-fluid bg-dark ">
+    <router-link to="/tienda">Tienda</router-link> |
+    <router-link to="/about" >About</router-link>
   </div>
   <router-view/>
 </template>
