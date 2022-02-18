@@ -2,6 +2,7 @@
 
 <template>
     <div class="container-fluid ">
+        
         <button class="btn btn-warning ">Funciono Bien</button>
     </div>
 </template>
