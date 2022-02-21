@@ -1,7 +1,17 @@
 <template>
-  <div id="nav" class="nav nav-fluid bg-dark ">
-    <router-link to="/tienda">Tienda</router-link> |
+  <div id="nav" class="nav nav-fluid bg-light  ">
+    <div class="container-fluid">
+    <a class="navbar-brand" style="color:black; margin-bottom: 3%;">Valentines Shop</a>
+  </div>
+  <div class="navbar-item text-center mx-auto " style="margin-top:4%;">
+    <router-link to="/" style=" color: brown;">Tienda</router-link> 
+   
+  </div>
+<div class="navbar-item text-center mx-auto " style="margin-top:4%;">
     <router-link to="/about" >About</router-link>
+   
+  </div>
+     
   </div>
   <router-view/>
 </template>

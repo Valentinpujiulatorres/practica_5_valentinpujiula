@@ -3,12 +3,12 @@ import Home from '../views/Home.vue'
 import Tienda from '../views/Tienda.vue'
 
 const routes = [{
-        path: '/Tienda',
+        path: '/',
         name: 'Tienda',
         component: Tienda
     },
     {
-        path: '/',
+        path: '/Home',
         name: 'Home',
         component: Home
     },

@@ -1,8 +1,6 @@
 <template>
 <PaginaTienda/>
-  <div class="Tienda">
-    <img alt="Vue logo" src="../assets/BicycleLogo.jpg">
-  </div>
+  
 </template>
 
 
