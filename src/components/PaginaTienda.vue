@@ -1,27 +1,25 @@
 //Aqui va el Grueso de la pagina que voy a cargar 
 
-<template>
-    <div class="container-fluid  row">
+<template >
+    <div class="container-fluid " style="background-color: antiquewhite;">
         
-        <div class="col col-lg-6">
-            <div>
-                <H3>Productos</H3> <hr>
-                <ol v-for="item in $store.state.productos" :key="item.id"> Name :{{ item.name }} Price : ( {{item.price}} $ )  <button v-on:click="addItem(item)">+</button> </ol>
-            </div>
+        <section style="width: auto; float: left; max-width: 55vw; display: inline-block; " class="container-fluid" >
+        
+                <H3>Usuarios</H3> 
+                <div style="display:flex">
+                    <ol v-for="item in $store.state.productos" :key="item.id"> Name :{{ item.name }} Points : ( {{item.points}}  )  <button v-on:click="addItem(item)">+</button> </ol>
+            
+                </div>
+                
 
             
-        </div>
-        <div class="col col-lg-3">
-            <div>
-                <h4>Carrito</h4>
+        </section>
+        <aside style="width: 40vw; float: right; margin-top: 0px;background-color: blue; display: block; " class="container-fluid">
+                <h4>Render Users</h4>
                 
                 <ol   v-for="item in $store.state.Carrito" :key="item.id"> Name :{{ item.name }} Price : ( {{item.price}} $ ) ×  {{item.qty}}  <button v-on:click="removeItem(item)">-</button> </ol>
 
-                <p>TOTAL</p>
-                <p>{{total()}}</p>
-            </div>
-
-        </div>
+        </aside>
         
     </div>
 </template>
@@ -92,6 +90,7 @@ export default {
     //    this.$store.commit('addItem', item)   this.$store.state.Carrito.indexOf(item)
     },
     removeItem(item) {
+        
         this.$store.state.Carrito.splice(this.$store.state.Carrito.indexOf(item), 1);
     },
     total(){
