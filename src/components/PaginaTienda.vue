@@ -1,27 +1,76 @@
 //Aqui va el Grueso de la pagina que voy a cargar 
 
 <template >
-    <div class="container-fluid " style="background-color: antiquewhite;">
-        
-        <section style="width: auto; float: left; max-width: 55vw; display: inline-block; " class="container-fluid" >
-        
-                <H3>Usuarios</H3> 
-                <div style="display:flex">
-                    <ol v-for="item in $store.state.productos" :key="item.id"> Name :{{ item.name }} Points : ( {{item.points}}  )  <button v-on:click="addItem(item)">+</button> </ol>
-            
+    <div  style="background-color:white;">
+    <div class="container-fluid">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/BicycleLogo.jpg" class="d-block mx-auto " style="width:500px;">
+                        <div class="carousel-caption">
+                            <h3>What u can do here </h3>
+                            <p>U can buy every product we offer , adding it to ur basket</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/BicycleLogo.jpg" class="d-block mx-auto " style="width:500px;" >
+                        <div class="carousel-caption">
+                            <h3 class="terciary-yellow">SCSS(2)</h3>
+                            <p class="terciary-yellow">Maping , Override & Color Palette</p>
+                        </div>
+                    </div>
                 </div>
-                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="btn btn-success">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="btn btn-success">Next</span>
+                </button>
+            </div>
+
+        </div>
+        
+        <section style="width: 60vw; float: left;  padding-top: 4%;" class="container-fluid" >
+                <H3><b>Productos:</b></H3> <br>
+                    <div v-for="item in $store.state.productos" :key="item.id" class="container"> 
+                        <div class="card row mx-auto" style="max-width: 60%;" >
+                        <div v-if="item.image === 'bA'">
+                            <img src="../assets/OptimizedImages/bicicletaAmarilla.jpg" class="card-img-top mx-auto" style="width:50%;">
+                        </div>
+                        <div v-else-if="item.image === 'bG'">
+                            <img src="../assets/OptimizedImages/bicicletaGris.jpg" class="card-img-top mx-auto" style="width:50%;">
+                        </div>
+                          <div v-else-if="item.image === 'bAz'">
+                            <img src="../assets/OptimizedImages/bicicletaAzul.jpg" class="card-img-top mx-auto" style="width:50%;">
+                        </div>
+                         <div v-else-if="item.image === 'bVin'">
+                            <img src="../assets/OptimizedImages/bicicletaVintage.jpg" class="card-img-top mx-auto" style="width:50%;">
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title"> Name :{{ item.name }}</h5>
+                            <p class="card-text"><b>Price :</b>   {{item.price}} $ </p>
+                             <button v-on:click="addItem(item)">Add</button>
+                        </div>
+                        </div><br>
+                    </div>
+                      
 
             
         </section>
-        <aside style="width: 40vw; float: right; margin-top: 0px;background-color: blue; display: block; " class="container-fluid">
-                <h4>Render Users</h4>
+        <aside style="background-color: #aca39c; float: right; padding: 4%; width: 30vw; margin-right: 2%; " class="container-fluid rounded">
+                <h4>Tu Carrito <span>&#128373;&#127996;</span></h4>
                 
                 <ol   v-for="item in $store.state.Carrito" :key="item.id"> Name :{{ item.name }} Price : ( {{item.price}} $ ) ×  {{item.qty}}  <button v-on:click="removeItem(item)">-</button> </ol>
-
+                <button class="btn-success btn" > Total {{total()}}  $ </button><br>
+                <router-link to="/about" style="color:#2c2d3c;" >Checkout</router-link>
+               
         </aside>
         
     </div>
+
 </template>
 <script>
 export default {

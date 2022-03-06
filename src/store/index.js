@@ -4,12 +4,10 @@ export default createStore({
     state: {
 
         productos: [
-            { name: "Champu Anticaspa", price: 7, qty: 0, id: 1 },
-            { name: "Almendras", price: 7, qty: 0, id: 2 },
-            { name: "Nestea", price: 7, qty: 0, id: 3 },
-            { name: "DvD Player", price: 45, qty: 0, id: 4 },
-            { name: "DvD Pack [70]", price: 45, qty: 0, id: 4 },
-            { name: "Avellanas", price: 4, qty: 0, id: 2 },
+            { name: "Bicicleta Gris", price: 120, qty: 0, id: 1, image: 'bG' },
+            { name: "Bicicleta Amarilla L.E", price: 215, qty: 0, id: 2, image: 'bA' },
+            { name: "Bicicleta Azul", price: 215, qty: 0, id: 3, image: 'bAz' },
+            { name: "Bicicleta Vintage", price: 599, qty: 0, id: 2, image: 'bVin' },
 
         ],
         Carrito: [],
