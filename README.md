@@ -2,6 +2,9 @@
 
 ### Requerimientos de la practica :
 
+
+Netlify Deployment :
+
 - **Principios de UX :**
 
 1. Evita carregar la interfície amb contingut irrellevant o colors estridents
@@ -11,8 +14,8 @@
 1. Empra fitxers d’imatge amb la qualitat adequada a cada situació
 1. Evita que l’usuari hagi d’aprendre conceptes o processos
 1. Treballa amb components web estàndard
-1. Incorpora tendències actuals en disseny web
-1. Dóna a cada icona/botó un sentit únic, no ambigu
+
+
 
 - **Principios de Usabilitat** 
 
@@ -21,7 +24,8 @@
 1. Els links reaccionen  quan passam per sobre (hover) amb: Canvi de color, subratllat, efecte visual. 
 1. Emplea només un `<h1>` per pàgina per indicar la idea més important  
 1. Titula seccions i subseccions per ordre d’importància, amb `<h2>`, `<h3>` etc
-
+1. Dóna a cada icona/botó un sentit únic, no ambigu
+1. Incorpora tendències actuals en disseny web
 
 
 

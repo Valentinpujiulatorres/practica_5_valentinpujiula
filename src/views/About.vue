@@ -4,7 +4,7 @@
     <p>This is your checkout menu</p>
 
     <div id="response" style="border-radius: 50px; width: 500px; background-color: azure; " class="bordered mx-auto">
-      <button v-on:click="printcheckout()" class="btn btn-warning">Import de Mi Carrito</button><br><br>
+      <button v-on:click="printcheckout()" class="btn btn-warning">Detalles de Mi Carrito</button><br><br>
     </div>
     <button class="btn btn-primary" v-on:click="payment()">Pay {{total()}} $</button>
     </div>

@@ -8,15 +8,13 @@
                     <div class="carousel-item active">
                         <img src="../assets/BicycleLogo.jpg" class="d-block mx-auto " style="width:500px;">
                         <div class="carousel-caption">
-                            <h3>What u can do here </h3>
-                            <p>U can buy every product we offer , adding it to ur basket</p>
+                          
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../assets/BicycleLogo.jpg" class="d-block mx-auto " style="width:500px;" >
+                        <img src="../assets/OptimizedImages/bicicletaVintage.jpg" class="d-block mx-auto " style="width:500px;" >
                         <div class="carousel-caption">
-                            <h3 class="terciary-yellow">SCSS(2)</h3>
-                            <p class="terciary-yellow">Maping , Override & Color Palette</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -52,7 +50,7 @@
                         <div class="card-body">
                             <h5 class="card-title"> Name :{{ item.name }}</h5>
                             <p class="card-text"><b>Price :</b>   {{item.price}} $ </p>
-                             <button v-on:click="addItem(item)">Add</button>
+                             <button v-on:click="addItem(item)" class="btn btn-primary">Add</button>
                         </div>
                         </div><br>
                     </div>
